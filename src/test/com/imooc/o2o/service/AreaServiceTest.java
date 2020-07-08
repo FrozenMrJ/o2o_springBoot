@@ -1,0 +1,24 @@
+package com.imooc.o2o.service;
+
+import com.imooc.o2o.BaseTest;
+import com.imooc.o2o.entity.Area;
+import org.junit.Assert;
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
+
+public class AreaServiceTest extends BaseTest {
+    @Autowired
+    private AreaService areaService;
+    @Autowired
+    private CacheService cacheService;
+
+    @Test
+    public void testGetAreaList(){
+        List<Area> areaList = areaService.getAreaList();
+        Assert.assertEquals("南苑",areaList.get(0).getAreaName());
+        cacheService.removeFromCache(areaService.AREALISTKEY);
+        areaList = areaService.getAreaList();
+    }
+}

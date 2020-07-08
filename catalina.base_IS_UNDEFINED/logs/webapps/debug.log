@@ -1,0 +1,33 @@
+2020-07-07 11:07:24.943 [main] DEBUG com.imooc.o2o.dao.AreaDao.queryArea - ==>  Preparing: SELECT area_id, area_name, priority, create_time, last_edit_time FROM tb_area ORDER BY priority DESC 
+2020-07-07 11:07:25.196 [main] DEBUG com.imooc.o2o.dao.AreaDao.queryArea - ==> Parameters: 
+2020-07-07 11:07:25.386 [main] DEBUG com.imooc.o2o.dao.AreaDao.queryArea - <==      Total: 3
+2020-07-07 11:30:41.455 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.insertLocalAuth - ==>  Preparing: INSERT INTO tb_local_auth(username,password,user_id,create_time,last_edit_time) VALUES (?,?,?,?,?) 
+2020-07-07 11:30:41.536 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.insertLocalAuth - ==> Parameters: testusername(String), testpassword(String), 1(Long), 2020-07-07 11:30:40.965(Timestamp), null
+2020-07-07 11:30:41.554 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.insertLocalAuth - <==    Updates: 1
+2020-07-07 11:31:42.451 [main] DEBUG c.i.o.dao.LocalAuthDao.queryLocalByUserNameAndPwd - ==>  Preparing: SELECT l.local_auth_id, l.username, l.password, l.create_time, l.last_edit_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_local_auth l LEFT JOIN tb_person_info p ON l.user_id = p.user_id WHERE l.username = ? AND l.password = ? 
+2020-07-07 11:31:42.518 [main] DEBUG c.i.o.dao.LocalAuthDao.queryLocalByUserNameAndPwd - ==> Parameters: testusername(String), testpassword(String)
+2020-07-07 11:31:42.553 [main] DEBUG c.i.o.dao.LocalAuthDao.queryLocalByUserNameAndPwd - <==      Total: 1
+2020-07-07 13:28:21.055 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: update tb_local_auth SET password=?, last_edit_time=? where user_id=? AND username=? AND password=? 
+2020-07-07 13:28:21.132 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: testpasswordnew(String), 2020-07-07 13:28:20.534(Timestamp), 1(Long), testusername(String), testpassword(String)
+2020-07-07 13:28:21.145 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.updateLocalAuth - <==    Updates: 1
+2020-07-07 13:28:21.151 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.queryLocalByUserId - ==>  Preparing: SELECT l.local_auth_id, l.username, l.password, l.create_time, l.last_edit_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_local_auth l LEFT JOIN tb_person_info p ON l.user_id = p.user_id WHERE l.user_id = ? 
+2020-07-07 13:28:21.151 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.queryLocalByUserId - ==> Parameters: 1(Long)
+2020-07-07 13:28:21.188 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.queryLocalByUserId - <==      Total: 1
+2020-07-07 13:46:26.367 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.queryLocalByUserId - ==>  Preparing: SELECT l.local_auth_id, l.username, l.password, l.create_time, l.last_edit_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_local_auth l LEFT JOIN tb_person_info p ON l.user_id = p.user_id WHERE l.user_id = ? 
+2020-07-07 13:46:26.405 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.queryLocalByUserId - ==> Parameters: 1(Long)
+2020-07-07 13:46:26.436 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.queryLocalByUserId - <==      Total: 1
+2020-07-07 13:47:46.669 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.queryLocalByUserId - ==>  Preparing: SELECT l.local_auth_id, l.username, l.password, l.create_time, l.last_edit_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_local_auth l LEFT JOIN tb_person_info p ON l.user_id = p.user_id WHERE l.user_id = ? 
+2020-07-07 13:47:46.710 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.queryLocalByUserId - ==> Parameters: 1(Long)
+2020-07-07 13:47:46.741 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.queryLocalByUserId - <==      Total: 0
+2020-07-07 13:47:46.752 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.insertLocalAuth - ==>  Preparing: INSERT INTO tb_local_auth(username,password,user_id,create_time,last_edit_time) VALUES (?,?,?,?,?) 
+2020-07-07 13:47:46.763 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.insertLocalAuth - ==> Parameters: testusername(String), s06l5bl5s05602ly2syls6556q56sb6e(String), 1(Long), 2020-07-07 13:47:46.749(Timestamp), 2020-07-07 13:47:46.749(Timestamp)
+2020-07-07 13:47:46.770 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.insertLocalAuth - <==    Updates: 1
+2020-07-07 13:47:46.797 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.queryLocalByUserId - ==>  Preparing: SELECT l.local_auth_id, l.username, l.password, l.create_time, l.last_edit_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_local_auth l LEFT JOIN tb_person_info p ON l.user_id = p.user_id WHERE l.user_id = ? 
+2020-07-07 13:47:46.797 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.queryLocalByUserId - ==> Parameters: 1(Long)
+2020-07-07 13:47:46.801 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.queryLocalByUserId - <==      Total: 1
+2020-07-07 13:49:43.474 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.updateLocalAuth - ==>  Preparing: update tb_local_auth SET password=?, last_edit_time=? where user_id=? AND username=? AND password=? 
+2020-07-07 13:49:43.524 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.updateLocalAuth - ==> Parameters: 6559sq606y6l92e9ss5qsqb5q92e566b(String), 2020-07-07 13:49:43.362(Timestamp), 1(Long), testusername(String), s06l5bl5s05602ly2syls6556q56sb6e(String)
+2020-07-07 13:49:43.528 [main] DEBUG com.imooc.o2o.dao.LocalAuthDao.updateLocalAuth - <==    Updates: 1
+2020-07-07 13:49:43.540 [main] DEBUG c.i.o.dao.LocalAuthDao.queryLocalByUserNameAndPwd - ==>  Preparing: SELECT l.local_auth_id, l.username, l.password, l.create_time, l.last_edit_time, p.user_id, p.name, p.gender, p.email, p.profile_img, p.user_type, p.create_time, p.last_edit_time, p.enable_status FROM tb_local_auth l LEFT JOIN tb_person_info p ON l.user_id = p.user_id WHERE l.username = ? AND l.password = ? 
+2020-07-07 13:49:43.541 [main] DEBUG c.i.o.dao.LocalAuthDao.queryLocalByUserNameAndPwd - ==> Parameters: testusername(String), 6559sq606y6l92e9ss5qsqb5q92e566b(String)
+2020-07-07 13:49:43.578 [main] DEBUG c.i.o.dao.LocalAuthDao.queryLocalByUserNameAndPwd - <==      Total: 1
